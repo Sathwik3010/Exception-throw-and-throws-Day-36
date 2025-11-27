@@ -1,0 +1,70 @@
+finally block is always executes, whether, an exception occurs or not. it's like a cleanup crew that always does it's job.
+
+syntax
+-------
+try{
+} catch(Exception e){
+} finally{
+}
+
+key points
+----------
+always executes(Except in case of System.exit() or JVM crash)
+used for cleanup activities(closing resources).
+can exists without catch block.
+executes even if there is a return statement in try or catch.
+
+what are the difference between final, finally, finalize
+----------------------------------------------------------
+final
+-----
+final is a modifier applicable for classes, methods, variables.
+if a class is declared as final we cannot extend the class.
+if a method is declared as final we cannot override that method.
+if a variable is declared as final we cannot reassign that variable.
+
+finally
+--------
+it is the block always associated with try catch to maintain clean up code which should be executed always irrespective of whether exception is raised or not raised and whether handled or not handled.
+
+finalize()
+----------
+It is a method which should be called by garbage collector always just before destroying an object to perform cleanup activities.
+
+Note:
+------
+to maintain cleanup code finally block is recommended over finalize method because we can't expect exact behaviour of garbage collection.
+
+throw
+------
+the throw keyword is used to explicitly throw an exception. it's like manually triggering an alarm when you detect a problem.
+
+syntax
+-------
+throw new Exception("Error Message");
+
+keypoints
+----------
+used to throw exception manually.
+can throw both checked and unchecked exceptions.
+must be followed by exception object.
+stops normal execution flow.
+
+throws
+------
+the throws keyword is used in method declarations to specify that method might throw certain exceptions. just like putting a warning sign on a method.
+
+syntax
+------
+public returntype methodName() throws ExceptionType1, ExceptionType2{
+}
+
+keypoints
+--------
+used in method signature
+declarations that method might throw exceptions
+caller must handle or declare the exception.
+can specify multiple exceptionTypes.
+
+checked exception and unchecked
+-------------------------------
